@@ -1,0 +1,19 @@
+jdk动态代理实现：
+1、把代理类单独拿出来 实现 InvocationHandler 接口  重写 invoke 方法
+这种代理类得和类一一对应起来有点不爽 可以扩展一下将代理的内容变成可变的形式
+。。。。
+
+后续自行 修改和扩展
+
+2018年12月9日18:07:01 第一版
++++++++++++++++++++++++++++++++++++++++++
+
+cglib 动态代理一定要导入cglib-2.1_2.jar 
+因为要用到asm，所以也要导入asm.jar 不然会报错如下
+
+Exception in thread "main" java.lang.NoClassDefFoundError: org/objectweb/asm/Type
+
+代理类一定要实现
+net.sf.cglib.proxy.MethodProxy;  类
+
+
